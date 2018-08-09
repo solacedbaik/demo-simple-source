@@ -1,0 +1,55 @@
+//tag::ref-doc[]
+= Random Number Generator Source
+
+Use the randomgen app to emit random numbers into a stream.
+
+
+== Input
+
+=== Headers
+
+N/A
+
+=== Payload
+
+* Any
+
+== Output
+
+=== Headers
+
+N/A
+
+=== Payload
+
+* Any
+
+== Options
+
+The **$$converter$$** $$processor$$ has the following options:
+
+//tag::configuration-properties[]
+$$randomgen.random-multiplier$$:: $$<documentation missing>$$ *($$Integer$$, default: `$$100$$`)*
+//end::configuration-properties[]
+
+== Build
+
+```
+$ ./mvnw clean install -PgenerateApps
+$ cd apps
+```
+You can find the corresponding binder based projects here.
+You can then cd into one one of the folders and build it:
+```
+$ ./mvnw clean package
+```
+
+== Examples
+
+```
+java -jar converter-processor.jar --expression=payload.toUpperCase()
+```
+
+This converter will convert all message payloads to upper case.
+
+//end::ref-doc[]
